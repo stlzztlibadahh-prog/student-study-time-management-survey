@@ -1,15 +1,70 @@
-**Nama** : Siti Lizatul Ibadah 
-**NIM** : G1F02410035  
-**Kelas** : A  
-**Program Studi** : Statistika  
-**Universitas** : Universitas Mataram
-
 # Analisis Manajemen Waktu Belajar Mahasiswa Program Studi Statistika Universitas Mataram Menggunakan Metode Two-Stage Cluster Sampling
 
-# BAB I
-# PENDAHULUAN
+![Language](https://img.shields.io/badge/Language-R-276DC3?logo=r&logoColor=white)
+![Method](https://img.shields.io/badge/Method-Two--Stage%20Cluster%20Sampling-success)
+![Sampling](https://img.shields.io/badge/Sampling-Probability%20Sampling-yellowgreen)
+![Analysis](https://img.shields.io/badge/Analysis-Survey-orange)
+![Variable](https://img.shields.io/badge/Variable-Time%20Management-blueviolet)
 
-## 1.1 Latar Belakang
+---
+
+## Deskripsi Proyek
+
+Repository ini memuat seluruh tahapan penelitian mengenai manajemen waktu belajar mahasiswa Program Studi Statistika Universitas Mataram dengan menerapkan metode Two-Stage Cluster Sampling sebagai teknik pengambilan sampel. Penelitian dilakukan berdasarkan data hasil penyebaran kuesioner untuk memperoleh gambaran mengenai tingkat manajemen waktu belajar mahasiswa serta menghasilkan estimasi yang dapat mewakili populasi.
+
+Proses analisis dilakukan menggunakan bahasa pemrograman R, dimulai dari pengolahan dan pemeriksaan kualitas data, pembentukan variabel penelitian, pengujian validitas dan reliabilitas instrumen, analisis statistika deskriptif, visualisasi data, perhitungan bobot sampel, hingga analisis survei melalui estimasi Weighted Mean, Standard Error (SE), Confidence Interval (CI), Design Effect (DEFF), dan Relative Standard Error (RSE).
+
+Repository ini disusun sebagai dokumentasi penelitian yang terstruktur sehingga setiap tahapan analisis dapat dipelajari, direplikasi, dan dijadikan referensi dalam penerapan metode survei menggunakan Two-Stage Cluster Sampling.
+
+---
+
+## Struktur Repository
+
+```text
+Analisis-Manajemen-Waktu-Belajar/
+├── README.md
+├── Executive_Summary.pdf
+├── data/
+│   └── Data_Kuesioner.xlsx
+├── script/
+│   └── Analisis_Manajemen_Waktu.R
+├── output/
+│   ├── Bar_Chart.png
+│   └── Heatmap_Korelasi.png
+├── randomisasi/
+│   └── Hasil_Randomisasi_Cluster.pdf
+└── formulir/
+    └── Kuesioner.pdf
+```
+
+Keterangan struktur repository:
+
+| Folder/File | Keterangan |
+|-------------|------------|
+| README.md | Dokumentasi lengkap penelitian dan hasil analisis. |
+| data | Berisi data mentah yang digunakan pada penelitian. |
+| script | Berisi script R untuk seluruh proses analisis data. |
+| gambar | Berisi visualisasi hasil analisis berupa bar chart dan heatmap. |
+| randomisasi | Berisi hasil proses pemilihan cluster secara acak menggunakan metode Two-Stage Cluster Sampling. |
+| formulir | Berisi instrumen penelitian berupa kuesioner yang digunakan dalam pengumpulan data. |
+
+---
+
+## Daftar Isi
+
+- [Latar Belakang](#latar-belakang)
+- [Tujuan Penelitian](#tujuan-penelitian)
+- [Metodologi Penelitian](#metodologi-penelitian)
+- [Struktur Repository](#struktur-repository)
+- [Alur Analisis](#alur-analisis)
+- [Hasil dan Pembahasan](#hasil-dan-pembahasan)
+- [Kesimpulan](#kesimpulan)
+- [Rekomendasi](#rekomendasi)
+- [Referensi](#referensi)
+- [Link Kuesioner](#link-kuesioner)
+---
+
+## Latar Belakang
 
 Manajemen waktu merupakan kemampuan seseorang dalam mengatur dan memanfaatkan waktu secara efektif untuk menyelesaikan berbagai aktivitas. Bagi mahasiswa, manajemen waktu belajar menjadi salah satu faktor penting yang dapat mendukung keberhasilan akademik. Kemampuan dalam mengatur jadwal belajar, menyelesaikan tugas tepat waktu, serta menyeimbangkan kegiatan akademik dan nonakademik dapat meningkatkan produktivitas dan efektivitas proses belajar.
 
@@ -17,57 +72,49 @@ Mahasiswa Program Studi Statistika Universitas Mataram memiliki berbagai aktivit
 
 Penelitian ini menggunakan metode Two-Stage Cluster Sampling sebagai teknik pengambilan sampel. Data diperoleh melalui penyebaran kuesioner kepada mahasiswa Program Studi Statistika Universitas Mataram. Hasil penelitian diharapkan dapat memberikan informasi mengenai karakteristik manajemen waktu belajar mahasiswa serta menjadi bahan evaluasi untuk meningkatkan efektivitas proses pembelajaran.
 
-## 1.2 Rumusan Masalah
+---
 
-a. Bagaimana karakteristik manajemen waktu belajar mahasiswa Program Studi Statistika Universitas Mataram?<br>
-b. Bagaimana gambaran kebiasaan mahasiswa dalam mengelola waktu belajar?<br>
-c. Bagaimana hasil analisis manajemen waktu belajar mahasiswa menggunakan metode Two-Stage Cluster Sampling?
+## Tujuan Penelitian
 
-## 1.3 Tujuan Penelitian
+Penelitian ini bertujuan untuk:
 
-a. Mengetahui karakteristik manajemen waktu belajar mahasiswa Program Studi Statistika Universitas Mataram.<br>
-b. Mendeskripsikan kebiasaan mahasiswa dalam mengelola waktu belajar.<br>
-c. Menganalisis manajemen waktu belajar mahasiswa berdasarkan data yang diperoleh melalui metode Two-Stage Cluster Sampling.
+- Mendeskripsikan tingkat manajemen waktu belajar mahasiswa Program Studi Statistika Universitas Mataram.
+- Menguji validitas dan reliabilitas instrumen penelitian.
+- Menerapkan metode Two-Stage Cluster Sampling dalam proses pengambilan sampel.
+- Menghitung bobot sampel berdasarkan peluang pemilihan pada setiap tahap sampling.
+- Mengestimasi rata-rata skor manajemen waktu belajar menggunakan analisis survei.
+- Mengevaluasi kualitas hasil estimasi melalui Standard Error (SE), Confidence Interval (CI), Design Effect (DEFF), dan Relative Standard Error (RSE).
 
-## 1.4 Manfaat Penelitian
+---
 
-### a. Bagi Mahasiswa
-Memberikan gambaran mengenai kebiasaan dalam mengelola waktu belajar sehingga dapat menjadi bahan evaluasi untuk meningkatkan efektivitas belajar.
+## Metodologi Penelitian
 
-### b. Bagi Program Studi
-Menjadi bahan informasi mengenai kondisi manajemen waktu belajar mahasiswa sebagai dasar dalam meningkatkan kualitas pembelajaran.
+Metodologi penelitian menjelaskan pendekatan yang digunakan, teknik pengambilan sampel, instrumen penelitian, teknik pengumpulan data, serta tahapan analisis yang dilakukan untuk memperoleh hasil penelitian.
 
-### c. Bagi Peneliti
-Menambah pengalaman dalam penyusunan instrumen penelitian, pengambilan sampel menggunakan metode Two-Stage Cluster Sampling, serta analisis data statistik.
+### Jenis Penelitian
 
-### d. Bagi Peneliti Selanjutnya
-Menjadi referensi bagi penelitian yang berkaitan dengan manajemen waktu belajar mahasiswa maupun metode pengambilan sampel.
+Penelitian ini merupakan penelitian kuantitatif dengan metode survei. Data dikumpulkan melalui penyebaran kuesioner kepada mahasiswa Program Studi Statistika Universitas Mataram untuk memperoleh informasi mengenai manajemen waktu belajar mahasiswa.
 
-# BAB II
-# METODOLOGI PENELITIAN
-
-## 2.1 Jenis Penelitian
-
-Penelitian ini merupakan penelitian kuantitatif dengan metode survei. Data diperoleh melalui penyebaran kuesioner kepada mahasiswa Program Studi Statistika Universitas Mataram untuk memperoleh informasi mengenai manajemen waktu belajar mahasiswa.
-
-## 2.2 Populasi dan Sampel
+### Populasi dan Sampel
 
 Populasi dalam penelitian ini adalah seluruh mahasiswa aktif Program Studi Statistika Universitas Mataram.
 
-Teknik pengambilan sampel menggunakan **Two-Stage Cluster Sampling**. Pada tahap pertama dilakukan pemilihan klaster menggunakan **Simple Random Sampling (SRS)**. Selanjutnya, pada tahap kedua dipilih responden dari setiap klaster yang terpilih sehingga diperoleh sampel yang mewakili populasi penelitian.
+Teknik pengambilan sampel menggunakan metode Two-Stage Cluster Sampling. Pada tahap pertama dilakukan pemilihan klaster menggunakan Simple Random Sampling (SRS). Klaster yang digunakan adalah kelas mahasiswa pada masing-masing angkatan sehingga terdapat enam klaster. Proses pemilihan klaster dilakukan secara acak menggunakan fungsi RAND pada Microsoft Excel hingga diperoleh dua klaster terpilih.
 
-## 2.3 Instrumen Penelitian
+Selanjutnya, pada tahap kedua dilakukan pemilihan responden dari setiap klaster yang terpilih hingga diperoleh jumlah sampel penelitian.
 
-Instrumen penelitian yang digunakan berupa kuesioner mengenai manajemen waktu belajar mahasiswa. Kuesioner terdiri atas 15 butir pernyataan yang disusun menggunakan **Skala Likert 4 poin**.
+### Instrumen Penelitian
+
+Instrumen penelitian berupa kuesioner mengenai manajemen waktu belajar mahasiswa yang terdiri atas 15 butir pernyataan menggunakan Skala Likert 4 poin.
 
 | Pilihan Jawaban | Skor |
-| :-------------- | :--: |
+|-----------------|:----:|
 | Sangat Tidak Setuju (STS) | 1 |
 | Tidak Setuju (TS) | 2 |
 | Setuju (S) | 3 |
 | Sangat Setuju (SS) | 4 |
 
-### Keterangan Variabel
+#### Variabel Penelitian
 
 | Kode | Pernyataan |
 |------|------------|
@@ -87,18 +134,30 @@ Instrumen penelitian yang digunakan berupa kuesioner mengenai manajemen waktu be
 | P14 | Saya mengevaluasi penggunaan waktu belajar saya secara berkala. |
 | P15 | Secara keseluruhan, saya merasa mampu mengelola waktu belajar dengan baik. |
 
-## 2.4 Teknik Pengumpulan Data
+### Teknik Pengumpulan Data
 
-Data dikumpulkan melalui penyebaran kuesioner kepada responden yang telah terpilih sebagai sampel penelitian. Sebelum digunakan dalam penelitian utama, instrumen terlebih dahulu diuji validitas dan reliabilitas kepada responden di luar sampel penelitian.
+Data dikumpulkan melalui penyebaran kuesioner kepada responden yang terpilih sebagai sampel penelitian. Sebelum digunakan dalam penelitian utama, instrumen terlebih dahulu diuji validitas dan reliabilitas menggunakan responden di luar sampel penelitian.
 
-## 2.5 Teknik Analisis Data
+---
 
-Analisis data dilakukan menggunakan perangkat lunak **R**. Tahapan analisis meliputi import data, uji validitas, uji reliabilitas, pengolahan data, statistika deskriptif, pembobotan sampel, dan analisis hasil survei.
+## Alur Analisis
+Analisis dilakukan menggunakan perangkat lunak R melalui tahapan:
 
-# BAB III
-# LANGKAH ANALISIS
+1. Import data hasil kuesioner.
+2. Pengolahan data (data cleaning).
+3. Menyiapkan variabel penelitian.
+4. Uji validitas instrumen.
+5. Uji reliabilitas instrumen.
+6. Analisis statistika deskriptif.
+7. Visualisasi data.
+8. Pembobotan menggunakan metode Two-Stage Cluster Sampling.
+9. Analisis survei menggunakan package `survey`, yang meliputi perhitungan Weighted Mean, Confidence Interval (CI), Design Effect (DEFF), dan Relative Standard Error (RSE).
+    
+---
 
-## 3.1 Import Data
+## LANGKAH ANALISIS
+
+### Import Data
 
 Data hasil kuesioner diimpor ke dalam R untuk dilakukan proses analisis.
 
@@ -112,9 +171,7 @@ str(data)
 summary(data)
 ```
 
----
-
-## 3.2 Pengolahan Data
+### Pengolahan Data
 
 Tahap ini dilakukan untuk memastikan data siap dianalisis.
 
@@ -126,9 +183,7 @@ colSums(is.na(data))
 data <- na.omit(data)
 ```
 
----
-
-## 3.3 Menyiapkan Variabel Penelitian
+### Menyiapkan Variabel Penelitian
 
 Variabel penelitian dipilih dari kolom H sampai V kemudian diberi nama P1–P15 agar lebih mudah dianalisis.
 
@@ -158,9 +213,7 @@ item <- data %>%
 data$Skor_Total <- rowSums(item)
 ```
 
----
-
-## 3.4 Uji Validitas
+### Uji Validitas
 
 Uji validitas dilakukan menggunakan Corrected Item-Total Correlation.
 
@@ -172,9 +225,7 @@ hasil_validitas <- alpha(item)
 hasil_validitas$item.stats
 ```
 
----
-
-## 3.5 Uji Reliabilitas
+### Uji Reliabilitas
 
 Uji reliabilitas dilakukan menggunakan Cronbach's Alpha.
 
@@ -184,9 +235,7 @@ hasil_reliabilitas <- alpha(item)
 hasil_reliabilitas$total
 ```
 
----
-
-## 3.6 Analisis Statistika Deskriptif
+### Analisis Statistika Deskriptif
 
 Analisis deskriptif dilakukan untuk mengetahui karakteristik responden dan gambaran skor manajemen waktu belajar.
 
@@ -212,9 +261,7 @@ table(data$`Jenis Kelamin`)
 prop.table(table(data$`Jenis Kelamin`))*100
 ```
 
----
-
-## 3.7 Visualisasi Data
+## Visualisasi Data
 
 Visualisasi data dilakukan untuk memberikan gambaran mengenai rata-rata skor setiap pernyataan serta hubungan antarbutir pernyataan pada kuesioner manajemen waktu belajar.
 
@@ -258,7 +305,7 @@ corrplot(
 )
 ```
 
-## 3.8 Pembobotan Two-Stage Cluster Sampling
+### Pembobotan Two-Stage Cluster Sampling
 
 Pembobotan dilakukan berdasarkan peluang pemilihan responden pada setiap tahap sampling.
 
@@ -291,9 +338,7 @@ data$Weight <- ifelse(
 )
 ```
 
----
-
-## 3.9 Analisis Data
+### Analisis Data
 
 Analisis data dilakukan menggunakan package **survey**.
 
@@ -323,18 +368,13 @@ hasil <- svymean(~Skor_Total, design)
 
 SE(hasil) / coef(hasil) * 100
 ```
-
-# BAB IV
-# HASIL DAN PEMBAHASAN
-
 ---
 
-## 4.1.1 Head Data
-Bagian ini menampilkan enam data pertama dari dataset untuk memberikan gambaran awal mengenai struktur data yang digunakan dalam penelitian.
+## HASIL DAN PEMBAHASAN
 
-```r
-head(data)
-```
+### Import Data
+#### Head Data
+Bagian ini menampilkan enam data pertama dari dataset untuk memberikan gambaran awal mengenai struktur data yang digunakan dalam penelitian.
 
 | Timestamp | Nama | Program Studi | Kelas | Angkatan | Semester | Jenis Kelamin |
 |----------|------|--------------|-------|----------|----------|----------------|
@@ -347,13 +387,9 @@ head(data)
 
 Berdasarkan data awal tersebut, terlihat bahwa responden terdiri dari mahasiswa Program Studi Statistika dengan variasi angkatan 2024 dan 2025. Data juga menunjukkan bahwa responden berasal dari satu kelas utama yaitu kelas A dengan perbedaan pada semester aktif.
 
-## 4.1.2 Struktur Data
+#### Struktur Data
 
 Struktur data digunakan untuk mengetahui tipe variabel yang terdapat dalam dataset penelitian.
-
-```r
-str(data)
-```
 
 | Variabel | Tipe Data | Keterangan |
 |----------|----------|-------------|
@@ -368,13 +404,9 @@ str(data)
 
 Hasil struktur data menunjukkan bahwa variabel penelitian terdiri dari kombinasi data kategorik dan numerik. Variabel item kuesioner (P1–P15) bertipe numerik yang sesuai untuk analisis statistik lanjutan seperti uji validitas, reliabilitas, dan analisis deskriptif.
 
-## 4.1.3 Statistik Deskriptif Item Kuesioner 
+#### Statistik Deskriptif Item Kuesioner 
 
 Statistik deskriptif digunakan untuk menggambarkan pola jawaban responden terhadap setiap indikator manajemen waktu belajar.
-
-```r
-summary(data)
-```
 
 | Item | Min | Q1 | Median | Mean | Q3 | Max |
 |------|-----|----|--------|------|----|-----|
@@ -396,54 +428,19 @@ summary(data)
 
 Berdasarkan hasil statistik deskriptif, seluruh item kuesioner menunjukkan nilai rata-rata berada pada rentang 2.700 hingga 3.367. Hal ini menunjukkan bahwa secara umum responden memiliki kecenderungan menjawab pada kategori “setuju”, yang mengindikasikan bahwa mahasiswa cukup mampu dalam mengelola waktu belajar mereka. Nilai median yang sebagian besar berada pada angka 3 menunjukkan bahwa distribusi jawaban responden cenderung terpusat pada kategori sedang hingga tinggi. Hal ini mengindikasikan bahwa tidak terdapat variasi ekstrem dalam jawaban responden pada sebagian besar item. Selain itu, nilai minimum yang berada pada angka 1–2 menunjukkan bahwa terdapat beberapa responden yang memiliki tingkat manajemen waktu yang lebih rendah, namun jumlahnya tidak dominan. Sebaliknya, nilai maksimum yang mencapai 4 pada hampir seluruh item menunjukkan bahwa terdapat responden dengan tingkat manajemen waktu yang sangat baik. Secara keseluruhan, hasil ini menunjukkan bahwa indikator manajemen waktu belajar mahasiswa Program Studi Statistika Universitas Mataram berada pada kategori cukup baik hingga baik.
 
----
-## 4.2 Pengolahan Data (Data Cleaning)
+### 2. Pengolahan Data (Data Cleaning)
 
-Tahap pengolahan data dilakukan untuk memastikan tidak terdapat data yang hilang (missing value) sebelum dilakukan analisis lebih lanjut.
+Tahap pengolahan data dilakukan untuk memastikan bahwa data yang digunakan telah memenuhi kualitas yang diperlukan sebelum memasuki tahap analisis. Pemeriksaan meliputi jumlah responden, keberadaan *missing value*, data duplikat, dan *outlier*.
 
-### 4.2.1 Pengecekan Missing Value
+| Pemeriksaan | Hasil |
+|--------------|:----:|
+| Jumlah Responden | 30 |
+| Missing Value | 0 |
+| Data Duplikat | 0 |
+| Outlier (Metode IQR) | 0 |
+| Status Data | Data siap dianalisis |
 
-```r
-colSums(is.na(data))
-```
-
-| Variabel | Missing Value |
-|----------|--------------|
-| Timestamp | 0 |
-| Nama | 0 |
-| Program Studi | 0 |
-| Kelas | 0 |
-| Angkatan | 0 |
-| Semester | 0 |
-| Jenis Kelamin | 0 |
-| P1 | 0 |
-| P2 | 0 |
-| P3 | 0 |
-| P4 | 0 |
-| P5 | 0 |
-| P6 | 0 |
-| P7 | 0 |
-| P8 | 0 |
-| P9 | 0 |
-| P10 | 0 |
-| P11 | 0 |
-| P12 | 0 |
-| P13 | 0 |
-| P14 | 0 |
-| P15 | 0 |
-
-Hasil pengecekan missing value menunjukkan bahwa seluruh variabel penelitian tidak memiliki data yang hilang (missing value = 0). Hal ini menunjukkan bahwa data yang diperoleh sudah lengkap dan siap untuk dilakukan analisis tanpa perlu dilakukan imputasi data.
-
-
-### 4.2.2 Pembersihan Data
-
-```r
-data <- na.omit(data)
-```
-
-Karena tidak ditemukan missing value pada data, maka proses penghapusan data menggunakan `na.omit()` tidak mengubah jumlah observasi. Dengan demikian, jumlah responden tetap sebanyak 30 orang dan data tetap lengkap untuk analisis lanjutan.
-
----
+Berdasarkan Tabel 4.2 diketahui bahwa data penelitian terdiri atas 30 responden. Hasil pemeriksaan menunjukkan bahwa tidak terdapat *missing value*, data duplikat, maupun *outlier* berdasarkan metode *Interquartile Range* (IQR). Dengan demikian, data telah memenuhi kriteria kualitas yang baik sehingga dapat digunakan pada tahap analisis selanjutnya tanpa memerlukan proses pembersihan atau perbaikan data tambahan.
 
 ## 4.3 Uji Validitas
 
