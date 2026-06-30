@@ -119,20 +119,15 @@ Instrumen penelitian berupa kuesioner mengenai manajemen waktu belajar mahasiswa
 | Kode | Pernyataan |
 |------|------------|
 | P1 | Saya membuat jadwal belajar untuk membantu mengatur waktu belajar saya. |
-| P2 | Saya menyediakan waktu khusus untuk belajar di luar jam perkuliahan. |
-| P3 | Saya belajar sesuai dengan jadwal yang telah saya rencanakan. |
-| P4 | Saya menentukan prioritas materi yang perlu dipelajari terlebih dahulu. |
-| P5 | Saya menyusun target belajar yang ingin dicapai dalam periode tertentu. |
-| P6 | Saya memanfaatkan waktu luang untuk mengulang materi perkuliahan. |
-| P7 | Saya menghindari menunda kegiatan belajar yang telah direncanakan. |
-| P8 | Saya tetap meluangkan waktu untuk belajar meskipun memiliki banyak kegiatan lainnya. |
-| P9 | Saya mampu membagi waktu antara belajar, organisasi, dan kegiatan pribadi. |
-| P10 | Saya mengurangi penggunaan media sosial saat waktu belajar berlangsung. |
-| P11 | Saya dapat berkonsentrasi dengan baik selama waktu belajar yang telah ditentukan. |
-| P12 | Saya menggunakan waktu belajar secara efektif untuk memahami materi perkuliahan. |
-| P13 | Saya menyelesaikan target belajar yang telah saya tetapkan. |
-| P14 | Saya mengevaluasi penggunaan waktu belajar saya secara berkala. |
-| P15 | Secara keseluruhan, saya merasa mampu mengelola waktu belajar dengan baik. |
+| P2 | Saya belajar sesuai dengan jadwal yang telah saya rencanakan. |
+| P3 | Saya memanfaatkan waktu luang untuk mengulang materi perkuliahan. |
+| P4 | Saya menghindari menunda kegiatan belajar yang telah direncanakan. |
+| P5 | Saya mengurangi penggunaan media sosial saat waktu belajar berlangsung. |
+| P6 | Saya dapat berkonsentrasi dengan baik selama waktu belajar yang telah ditentukan. |
+| P7 | Saya menggunakan waktu belajar secara efektif untuk memahami materi perkuliahan. |
+| P8 | Saya menyelesaikan target belajar yang telah saya tetapkan. |
+| P9 | Saya mengevaluasi penggunaan waktu belajar saya secara berkala. |
+| P10 | Secara keseluruhan, saya merasa mampu mengelola waktu belajar dengan baik. |
 
 ### Teknik Pengumpulan Data
 
@@ -181,6 +176,9 @@ colSums(is.na(data))
 
 # Menghapus missing value
 data <- na.omit(data)
+
+# Outlier
+boxplot.stats(data$Skor_Total)$out
 ```
 
 ### Menyiapkan Variabel Penelitian
@@ -188,25 +186,18 @@ data <- na.omit(data)
 Variabel penelitian dipilih dari kolom H sampai V kemudian diberi nama P1–P15 agar lebih mudah dianalisis.
 
 ```r
-library(dplyr)
-
 item <- data %>%
   select(
     P1 = `Saya membuat jadwal belajar untuk membantu mengatur waktu belajar saya.`,
-    P2 = `Saya menyediakan waktu khusus untuk belajar di luar jam perkuliahan.`,
-    P3 = `Saya belajar sesuai dengan jadwal yang telah saya rencanakan.`,
-    P4 = `Saya menentukan prioritas materi yang perlu dipelajari terlebih dahulu.`,
-    P5 = `Saya menyusun target belajar yang ingin dicapai dalam periode tertentu.`,
-    P6 = `Saya memanfaatkan waktu luang untuk mengulang materi perkuliahan.`,
-    P7 = `Saya menghindari menunda kegiatan belajar yang telah direncanakan.`,
-    P8 = `Saya tetap meluangkan waktu untuk belajar meskipun memiliki banyak kegiatan lainnya.`,
-    P9 = `Saya mampu membagi waktu antara belajar, organisasi, dan kegiatan pribadi.`,
-    P10 = `Saya mengurangi penggunaan media sosial saat waktu belajar berlangsung.`,
-    P11 = `Saya dapat berkonsentrasi dengan baik selama waktu belajar yang telah ditentukan.`,
-    P12 = `Saya menggunakan waktu belajar secara efektif untuk memahami materi perkuliahan.`,
-    P13 = `Saya menyelesaikan target belajar yang telah saya tetapkan.`,
-    P14 = `Saya mengevaluasi penggunaan waktu belajar saya secara berkala.`,
-    P15 = `Secara keseluruhan, saya merasa mampu mengelola waktu belajar dengan baik.`
+    P2 = `Saya belajar sesuai dengan jadwal yang telah saya rencanakan.`,
+    P3 = `Saya memanfaatkan waktu luang untuk mengulang materi perkuliahan.`,
+    P4 = `Saya menghindari menunda kegiatan belajar yang telah direncanakan.`,
+    P5 = `Saya mengurangi penggunaan media sosial saat waktu belajar berlangsung.`,
+    P6 = `Saya dapat berkonsentrasi dengan baik selama waktu belajar yang telah ditentukan.`,
+    P7 = `Saya menggunakan waktu belajar secara efektif untuk memahami materi perkuliahan.`,
+    P8 = `Saya menyelesaikan target belajar yang telah saya tetapkan.`,
+    P9 = `Saya mengevaluasi penggunaan waktu belajar saya secara berkala.`,
+    P10 = `Secara keseluruhan, saya merasa mampu mengelola waktu belajar dengan baik.`
   )
 
 # Membuat skor total
@@ -233,6 +224,8 @@ Uji reliabilitas dilakukan menggunakan Cronbach's Alpha.
 hasil_reliabilitas <- alpha(item)
 
 hasil_reliabilitas$total
+
+data$Skor_Total <- rowSums(item)
 ```
 
 ### Analisis Statistika Deskriptif
@@ -243,22 +236,16 @@ Analisis deskriptif dilakukan untuk mengetahui karakteristik responden dan gamba
 summary(data$Skor_Total)
 
 mean(data$Skor_Total)
-
 median(data$Skor_Total)
-
 sd(data$Skor_Total)
-
 min(data$Skor_Total)
-
 max(data$Skor_Total)
 
 table(data$Angkatan)
-
 table(data$Semester)
-
 table(data$`Jenis Kelamin`)
 
-prop.table(table(data$`Jenis Kelamin`))*100
+prop.table(table(data$`Jenis Kelamin`)) * 100
 ```
 
 ## Visualisasi Data
@@ -400,9 +387,9 @@ Struktur data digunakan untuk mengetahui tipe variabel yang terdapat dalam datas
 | Angkatan | numeric | Tahun angkatan |
 | Semester | numeric | Semester aktif |
 | Jenis Kelamin | character | Gender responden |
-| Item 1–15 | numeric | Skala Likert 1–4 |
+| Item 1–10 | numeric | Skala Likert 1–4 |
 
-Hasil struktur data menunjukkan bahwa variabel penelitian terdiri dari kombinasi data kategorik dan numerik. Variabel item kuesioner (P1–P15) bertipe numerik yang sesuai untuk analisis statistik lanjutan seperti uji validitas, reliabilitas, dan analisis deskriptif.
+Hasil struktur data menunjukkan bahwa variabel penelitian terdiri dari kombinasi data kategorik dan numerik. Variabel item kuesioner (P1–P10) bertipe numerik yang sesuai untuk analisis statistik lanjutan seperti uji validitas, reliabilitas, dan analisis deskriptif.
 
 #### Statistik Deskriptif Item Kuesioner 
 
@@ -410,23 +397,18 @@ Statistik deskriptif digunakan untuk menggambarkan pola jawaban responden terhad
 
 | Item | Min | Q1 | Median | Mean | Q3 | Max |
 |------|-----|----|--------|------|----|-----|
-| P1 | 2.0 | 3.0 | 3.0 | 3.167 | 3.75 | 4.0 |
-| P2 | 2.0 | 3.0 | 3.0 | 2.933 | 3.00 | 4.0 |
-| P3 | 1.0 | 3.0 | 3.0 | 3.033 | 3.00 | 4.0 |
-| P4 | 2.0 | 3.0 | 3.0 | 3.367 | 4.00 | 4.0 |
-| P5 | 2.0 | 3.0 | 3.0 | 2.967 | 3.00 | 4.0 |
-| P6 | 1.0 | 3.0 | 3.0 | 2.967 | 3.00 | 4.0 |
-| P7 | 2.0 | 2.25 | 3.0 | 2.900 | 3.00 | 4.0 |
-| P8 | 2.0 | 3.0 | 3.0 | 3.000 | 3.00 | 4.0 |
-| P9 | 2.0 | 3.0 | 3.0 | 3.033 | 3.00 | 4.0 |
-| P10 | 2.0 | 3.0 | 3.0 | 3.067 | 4.00 | 4.0 |
-| P11 | 2.0 | 3.0 | 3.0 | 3.133 | 4.00 | 4.0 |
-| P12 | 2.0 | 3.0 | 3.0 | 3.200 | 3.75 | 4.0 |
-| P13 | 2.0 | 3.0 | 3.0 | 3.133 | 3.75 | 4.0 |
-| P14 | 1.0 | 2.0 | 3.0 | 2.700 | 3.00 | 4.0 |
-| P15 | 2.0 | 3.0 | 3.0 | 3.133 | 3.75 | 4.0 |
+| P1 | 2.00 | 3.00 | 3.00 | 3.167 | 3.00 | 4.00 |
+| P2 | 1.00 | 3.00 | 3.00 | 3.033 | 3.00 | 4.00 |
+| P3 | 1.00 | 3.00 | 3.00 | 2.967 | 3.00 | 4.00 |
+| P4 | 2.00 | 2.25 | 3.00 | 2.900 | 3.00 | 4.00 |
+| P5 | 2.00 | 3.00 | 3.00 | 3.067 | 4.00 | 4.00 |
+| P6 | 2.00 | 3.00 | 3.00 | 3.133 | 3.00 | 4.00 |
+| P7 | 2.00 | 3.00 | 3.00 | 3.200 | 3.75 | 4.00 |
+| P8 | 2.00 | 3.00 | 3.00 | 3.133 | 3.75 | 4.00 |
+| P9 | 1.00 | 2.00 | 3.00 | 2.700 | 3.00 | 4.00 |
+| P10 | 2.00 | 3.00 | 3.00 | 3.133 | 3.75 | 4.00 |
 
-Berdasarkan hasil statistik deskriptif, seluruh item kuesioner menunjukkan nilai rata-rata berada pada rentang 2.700 hingga 3.367. Hal ini menunjukkan bahwa secara umum responden memiliki kecenderungan menjawab pada kategori “setuju”, yang mengindikasikan bahwa mahasiswa cukup mampu dalam mengelola waktu belajar mereka. Nilai median yang sebagian besar berada pada angka 3 menunjukkan bahwa distribusi jawaban responden cenderung terpusat pada kategori sedang hingga tinggi. Hal ini mengindikasikan bahwa tidak terdapat variasi ekstrem dalam jawaban responden pada sebagian besar item. Selain itu, nilai minimum yang berada pada angka 1–2 menunjukkan bahwa terdapat beberapa responden yang memiliki tingkat manajemen waktu yang lebih rendah, namun jumlahnya tidak dominan. Sebaliknya, nilai maksimum yang mencapai 4 pada hampir seluruh item menunjukkan bahwa terdapat responden dengan tingkat manajemen waktu yang sangat baik. Secara keseluruhan, hasil ini menunjukkan bahwa indikator manajemen waktu belajar mahasiswa Program Studi Statistika Universitas Mataram berada pada kategori cukup baik hingga baik.
+Berdasarkan hasil statistik deskriptif, nilai rata-rata setiap item kuesioner berada pada rentang 2.700 hingga 3.200. Hal ini menunjukkan bahwa secara umum responden cenderung memberikan jawaban pada kategori “setuju”, yang mengindikasikan bahwa mahasiswa memiliki kecenderungan cukup baik dalam mengelola waktu belajar mereka. Nilai median pada sebagian besar item berada pada angka 3, yang menunjukkan bahwa jawaban responden terkonsentrasi pada kategori sedang hingga tinggi. Hal ini mengindikasikan bahwa distribusi jawaban relatif stabil dan tidak menunjukkan penyebaran yang ekstrem pada sebagian besar item. Nilai minimum yang berada pada rentang 1 hingga 2 menunjukkan bahwa terdapat sebagian kecil responden dengan tingkat manajemen waktu belajar yang masih rendah. Namun demikian, nilai tersebut tidak mendominasi keseluruhan data. Sebaliknya, nilai maksimum yang mencapai 4 pada hampir seluruh item menunjukkan bahwa terdapat responden yang memiliki kemampuan manajemen waktu belajar yang sangat baik. Secara keseluruhan, hasil ini menunjukkan bahwa indikator manajemen waktu belajar mahasiswa Program Studi Statistika Universitas Mataram berada pada kategori cukup baik, dengan kecenderungan jawaban responden berada pada tingkat “setuju”.
 
 ### 2. Pengolahan Data (Data Cleaning)
 
