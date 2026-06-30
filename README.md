@@ -1,4 +1,4 @@
-**Nama** : Livia Naura  
+**Nama** : Siti Lizatul Ibadah 
 **NIM** : G1F02410035  
 **Kelas** : A  
 **Program Studi** : Statistika  
