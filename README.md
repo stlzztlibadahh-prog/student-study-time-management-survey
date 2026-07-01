@@ -427,11 +427,21 @@ Berdasarkan hasil pengolahan data, diketahui bahwa data penelitian terdiri atas 
 
 ## 3. Uji Validitas
 
-Uji validitas dilakukan untuk mengetahui apakah setiap butir pernyataan pada kuesioner sudah mampu mengukur variabel manajemen waktu belajar mahasiswa. Pengujian dilakukan menggunakan metode Corrected Item-Total Correlation (r.drop). Suatu item dinyatakan valid apabila memiliki nilai r.drop ≥ 0,30.
-\[
-r_{it}=\frac{\sum (X_i-\bar X_i)(T_i-\bar T_i)}
-{\sqrt{\sum (X_i-\bar X_i)^2\sum (T_i-\bar T_i)^2}}
-\]
+Uji validitas dilakukan untuk mengetahui apakah setiap butir pernyataan pada kuesioner telah mampu mengukur variabel manajemen waktu belajar mahasiswa. Pengujian menggunakan metode *Corrected Item-Total Correlation* (r.drop). Suatu item dinyatakan valid apabila memiliki nilai r.drop ≥ 0,300.
+
+```text
+                Σ(Xi − X̄i)(Ti − T̄i)
+r_it = -------------------------------------
+           √[Σ(Xi − X̄i)² × Σ(Ti − T̄i)²]
+```
+
+Keterangan:
+
+- r_it : Corrected Item-Total Correlation pada item ke-i.
+- Xi : Skor responden pada item ke-i.
+- X̄i : Rata-rata skor pada item ke-i.
+- Ti : Skor total responden tanpa memasukkan skor item ke-i.
+- T̄i : Rata-rata skor total tanpa memasukkan item ke-i.
 
 | Item | r.drop | Keterangan |
 |:----:|-------:|:----------:|
@@ -446,25 +456,26 @@ r_{it}=\frac{\sum (X_i-\bar X_i)(T_i-\bar T_i)}
 | P9 | 0.375 | Valid |
 | P10 | 0.685 | Valid |
 
-Berdasarkan Tabel 4.4, seluruh butir pernyataan memiliki nilai Corrected Item-Total Correlation (r.drop) lebih besar dari 0,300, yaitu berkisar antara 0,375 hingga 0,711. Hasil tersebut menunjukkan bahwa seluruh item telah memenuhi kriteria validitas sehingga mampu mengukur variabel manajemen waktu belajar mahasiswa dengan baik. Nilai r.drop tertinggi terdapat pada item P3 dan P7, yaitu sebesar 0,711, yang menunjukkan bahwa kedua item memiliki hubungan paling kuat dengan skor total instrumen. Sementara itu, nilai r.drop terendah terdapat pada item P9, yaitu sebesar 0,375. Meskipun merupakan nilai terendah, nilai tersebut masih berada di atas batas minimum yang ditetapkan sehingga item tersebut tetap dinyatakan valid. Secara keseluruhan, seluruh 10 item pernyataan dinyatakan valid dan layak digunakan pada tahap uji reliabilitas serta analisis selanjutnya tanpa perlu mengeliminasi satu pun butir pernyataan.
+Berdasarkan Tabel di atas, seluruh butir pernyataan memiliki nilai Corrected Item-Total Correlation (r.drop) lebih besar dari 0,300, yaitu berkisar antara 0,375 hingga 0,711. Hasil tersebut menunjukkan bahwa seluruh item telah memenuhi kriteria validitas sehingga mampu mengukur variabel manajemen waktu belajar mahasiswa dengan baik. Nilai r.drop tertinggi terdapat pada item P3 dan P7, yaitu sebesar 0,711, yang menunjukkan bahwa kedua item memiliki hubungan paling kuat dengan skor total instrumen. Sementara itu, nilai r.drop terendah terdapat pada item P9, yaitu sebesar 0,375. Meskipun merupakan nilai terendah, nilai tersebut masih berada di atas batas minimum yang ditetapkan sehingga item tersebut tetap dinyatakan valid. Secara keseluruhan, seluruh 10 item pernyataan dinyatakan valid dan layak digunakan pada tahap uji reliabilitas serta analisis selanjutnya tanpa perlu mengeliminasi satu pun butir pernyataan.
 
 ---
 
 ## 4. Uji Reliabilitas
 
-Uji reliabilitas dilakukan untuk mengetahui tingkat konsistensi instrumen penelitian dalam mengukur variabel manajemen waktu belajar mahasiswa. Pengujian menggunakan metode *Cronbach's Alpha*. Suatu instrumen dinyatakan reliabel apabila memiliki nilai *Cronbach's Alpha ≥ 0,700*.
+Uji reliabilitas dilakukan untuk mengetahui tingkat konsistensi instrumen penelitian. Pengujian dilakukan menggunakan metode *Cronbach's Alpha*. Instrumen dinyatakan reliabel apabila memiliki nilai Cronbach's Alpha ≥ 0,700.
 
-Rumus Cronbach's Alpha yang digunakan adalah:
+```text
+             k
+α = ---------------- × [1 − (ΣSi² / ST²)]
+          (k − 1)
+```
 
-\[
-\alpha=\frac{k}{k-1}\left(1-\frac{\sum S_i^2}{S_T^2}\right)
-\]
+Keterangan:
 
-dengan:
-
-- \(k\) = jumlah item pernyataan
-- \(S_i^2\) = varians setiap item
-- \(S_T^2\) = varians skor total
+- α : Koefisien Cronbach's Alpha.
+- k : Jumlah item pernyataan.
+- Si² : Varians masing-masing item.
+- ST² : Varians skor total.
 
 | Parameter | Nilai |
 |:-------------------------------|------:|
@@ -484,75 +495,66 @@ Berdasarkan Tabel di atas, diperoleh nilai *Cronbach's Alpha* sebesar 0.868, leb
 
 ## 5. Statistik Deskriptif
 
-#### Analisis Statistika Deskriptif
+### Analisis Statistika Deskriptif
 
-Analisis statistika deskriptif dilakukan untuk memberikan gambaran mengenai skor manajemen waktu belajar mahasiswa serta karakteristik responden berdasarkan angkatan, semester, dan jenis kelamin.
+Analisis statistika deskriptif dilakukan untuk memberikan gambaran umum mengenai skor manajemen waktu belajar mahasiswa serta karakteristik responden berdasarkan angkatan, semester, dan jenis kelamin.
 
 #### Statistik Deskriptif Skor Manajemen Waktu Belajar
 
 | Statistik | Nilai |
-|:-----------|------:|
-| Minimum | 21 |
+|:----------------------|------:|
+| Minimum | 21.00 |
 | Kuartil 1 (Q1) | 28.00 |
 | Median | 30.00 |
 | Mean | 30.43 |
 | Kuartil 3 (Q3) | 33.75 |
-| Maksimum | 39 |
+| Maksimum | 39.00 |
 | Standar Deviasi | 4.60 |
 
-Berdasarkan Tabel 4.5 diperoleh rata-rata skor manajemen waktu belajar mahasiswa sebesar 30,43 dengan nilai median sebesar 30. Nilai minimum yang diperoleh responden adalah 21, sedangkan nilai maksimum adalah 39. Standar deviasi sebesar 4,60 menunjukkan bahwa penyebaran skor responden relatif tidak terlalu besar sehingga sebagian besar skor berada di sekitar nilai rata-ratanya.
+Berdasarkan tabel di atas, diperoleh rata-rata skor manajemen waktu belajar mahasiswa sebesar 30,43 dengan nilai median 30,00. Skor terendah yang diperoleh responden adalah 21, sedangkan skor tertinggi adalah 39. Nilai standar deviasi sebesar 4,60 menunjukkan bahwa penyebaran skor responden relatif tidak terlalu besar, sehingga sebagian besar nilai berada di sekitar rata-rata.
 
 #### Distribusi Responden Berdasarkan Angkatan
 
-| Angkatan | Jumlah Responden |
-|:---------:|-----------------:|
-| 2024 | 13 |
-| 2025 | 17 |
-| Total | 30 |
+| Angkatan | Jumlah Responden | Persentase (%) |
+|:---------:|-----------------:|---------------:|
+| 2024 | 13 | 43.33 |
+| 2025 | 17 | 56.67 |
+| **Total** | **30** | **100.00** |
 
-Berdasarkan Tabel 4.6 diketahui bahwa responden angkatan 2025 berjumlah 17 orang, sedangkan angkatan 2024 berjumlah 13 orang. Hal ini menunjukkan bahwa sebagian besar responden pada penelitian ini berasal dari angkatan 2025.
+Berdasarkan tabel di atas, sebagian besar responden berasal dari angkatan 2025 sebanyak 17 orang (56,67%), sedangkan responden dari angkatan 2024 berjumlah 13 orang (43,33%).
 
 #### Distribusi Responden Berdasarkan Semester
 
-| Semester | Jumlah Responden |
-|:---------:|-----------------:|
-| 2 | 17 |
-| 4 | 13 |
-| Total | 30 |
+| Semester | Jumlah Responden | Persentase (%) |
+|:---------:|-----------------:|---------------:|
+| 2 | 17 | 56.67 |
+| 4 | 13 | 43.33 |
+| **Total** | **30** | **100.00** |
 
-Berdasarkan Tabel 4.7 diketahui bahwa responden semester 2 berjumlah 17 orang dan semester 4 berjumlah 13 orang. Dengan demikian, mayoritas responden dalam penelitian ini merupakan mahasiswa semester 2.
+Berdasarkan tabel di atas, responden didominasi oleh mahasiswa semester 2 sebanyak 17 orang (56,67%), sedangkan mahasiswa semester 4 berjumlah 13 orang (43,33%).
+
 
 #### Distribusi Responden Berdasarkan Jenis Kelamin
 
-| Jenis Kelamin | Jumlah | Persentase (%) |
-|:--------------|-------:|---------------:|
-| Laki-Laki | 3 | 10 |
-| Perempuan | 27 | 90 |
-| Total | 30 | 100 |
+| Jenis Kelamin | Jumlah Responden | Persentase (%) |
+|:--------------|-----------------:|---------------:|
+| Laki-Laki | 3 | 10.00 |
+| Perempuan | 27 | 90.00 |
+| **Total** | **30** | **100.00** |
 
-Berdasarkan Tabel 4.8 diketahui bahwa responden perempuan berjumlah 27 orang atau sebesar 90%, sedangkan responden laki-laki berjumlah 3 orang atau sebesar 10%. Hal ini menunjukkan bahwa mayoritas responden dalam penelitian ini adalah mahasiswa berjenis kelamin perempuan.
+Berdasarkan tabel di atas, mayoritas responden berjenis kelamin perempuan, yaitu sebanyak 27 orang (90,00%), sedangkan responden laki-laki berjumlah 3 orang (10,00%). Hal ini menunjukkan bahwa karakteristik responden dalam penelitian ini didominasi oleh mahasiswa perempuan.
 
 ---
 
 ## 6. Visualisasi Data
 
-### 6.1 Rata-rata Tiap Item
+### Rata-rata Tiap Item
 
-### Output
+<p align="center">
+  <img src="images/Bar Chart Analisis Manajemen Waktu Belajar" width="700">
+</p>
 
-```r
-ggplot(mean_df, aes(x = Variabel, y = Rata_rata)) +
-  geom_col(fill = "steelblue") +
-  theme_minimal()
-```
-
-### Pembahasan
-
-Grafik menunjukkan perbedaan rata-rata antar indikator manajemen waktu belajar. Beberapa indikator memiliki nilai lebih tinggi yang menunjukkan kebiasaan yang lebih baik pada aspek tersebut.
-
----
-
-### 4.7.2 Korelasi Antar Item
+### Korelasi Antar Item
 
 ### Output
 
@@ -566,71 +568,76 @@ Terdapat korelasi positif antar sebagian besar item yang menunjukkan bahwa indik
 
 ---
 
-## 4.7 Pembobotan Two-Stage Cluster Sampling
 
-## 4.8 Pembobotan Two-Stage Cluster Sampling
+## 7. Pembobotan Two-Stage Cluster Sampling
 
-Pembobotan dilakukan untuk memperoleh bobot setiap responden berdasarkan peluang terpilihnya sampel pada metode Two-Stage Cluster Sampling. Bobot dihitung menggunakan peluang pemilihan pada tahap pertama dan tahap kedua dengan rumus:
+Pembobotan dilakukan untuk memperoleh bobot setiap responden berdasarkan peluang terpilihnya sampel pada metode *Two-Stage Cluster Sampling*. Bobot dihitung menggunakan peluang pemilihan pada tahap pertama dan tahap kedua.
 
-\[
-P = P_1 \times P_2
-\]
+Peluang terpilihnya suatu responden dihitung menggunakan persamaan berikut.
+
+```text
+P = P₁ × P₂
+```
 
 dengan:
 
-- \(P_1\) = peluang pemilihan cluster pada tahap pertama
-- \(P_2\) = peluang pemilihan elemen pada tahap kedua
+- P₁ : Peluang pemilihan klaster pada tahap pertama.
+- P₂ : Peluang pemilihan responden pada tahap kedua.
 
-Sedangkan bobot dihitung menggunakan rumus:
+Bobot setiap responden dihitung menggunakan persamaan berikut.
 
-\[
-W=\frac{1}{P}
-\]
+```text
+W = 1 / P
+```
 
 ### Tahap Pertama
 
 Diketahui:
 
-- Jumlah cluster populasi (\(M\)) = 6
-- Jumlah cluster yang dipilih (\(m\)) = 2
+- Jumlah klaster populasi (M) = 6
+- Jumlah klaster yang dipilih (m) = 2
 
-Sehingga peluang pemilihan cluster adalah
+Sehingga peluang pemilihan klaster adalah
 
-\[
-P_1=\frac{m}{M}
-=\frac{2}{6}
-=0,3333
-\]
+```text
+P₁ = m / M
+   = 2 / 6
+   = 0,3333
+```
 
 ### Tahap Kedua
 
 #### Angkatan 2024
 
-\[
-P_2=\frac{13}{26}=0,5
-\]
+Peluang pemilihan responden pada angkatan 2024 adalah
+
+```text
+P₂ = 13 / 26
+   = 0,5000
+```
 
 Sehingga bobot responden angkatan 2024 adalah
 
-\[
-W_{2024}
-=\frac{1}{0,3333 \times 0,5}
-=6,0000
-\]
+```text
+W₂₀₂₄ = 1 / (0,3333 × 0,5000)
+      = 6,0000
+```
 
 #### Angkatan 2025
 
-\[
-P_2=\frac{17}{32}=0,53125
-\]
+Peluang pemilihan responden pada angkatan 2025 adalah
+
+```text
+P₂ = 17 / 32
+   = 0,5313
+```
 
 Sehingga bobot responden angkatan 2025 adalah
 
-\[
-W_{2025}
-=\frac{1}{0,3333 \times 0,53125}
-=5,6471
-\]
+```text
+W₂₀₂₅ = 1 / (0,3333 × 0,5313)
+      = 5,6471
+```
 
 ### Hasil Perhitungan Bobot
 
@@ -639,100 +646,150 @@ W_{2025}
 | 2024 | 26 | 13 | 0.5000 | 6.0000 |
 | 2025 | 32 | 17 | 0.5313 | 5.6471 |
 
-Berdasarkan hasil perhitungan diperoleh bobot sebesar 6,0000 untuk responden angkatan 2024 dan 5,6471 untuk responden angkatan 2025. Perbedaan bobot tersebut terjadi karena peluang terpilihnya responden pada masing-masing angkatan berbeda. Bobot ini kemudian digunakan pada tahap analisis survei agar hasil estimasi yang diperoleh dapat mewakili kondisi populasi secara lebih baik.
+Berdasarkan hasil perhitungan diperoleh bobot sebesar 6,0000 untuk responden angkatan 2024 dan 5,6471 untuk responden angkatan 2025. Perbedaan bobot tersebut terjadi karena peluang terpilihnya responden pada masing-masing angkatan berbeda. Bobot tersebut selanjutnya digunakan dalam analisis survei agar hasil estimasi yang diperoleh lebih representatif terhadap populasi penelitian.
+
 ---
 
-## 4.8 Analisis SurveI
+## 8. Analisis SurveI
 
 Analisis survei dilakukan menggunakan package `survey` pada perangkat lunak R dengan memanfaatkan bobot hasil pembobotan *Two-Stage Cluster Sampling* yang telah diperoleh pada tahap sebelumnya. Analisis ini bertujuan untuk memperoleh estimasi rata-rata skor manajemen waktu belajar mahasiswa beserta ukuran ketelitian hasil estimasinya.
 
----
 
-### 4.8.1 Rata-rata Tertimbang (*Weighted Mean*)
+### Weighted Mean
 
 Rata-rata tertimbang dihitung menggunakan persamaan berikut.
 
-\[
-\bar{Y}_w=\frac{\sum_{i=1}^{n}w_iY_i}{\sum_{i=1}^{n}w_i}
-\]
+```text
+          Σ(wiYi)
+Ȳw = ----------------
+            Σwi
+```
 
-dengan:
+Keterangan:
 
-- \(w_i\) = bobot responden ke-\(i\)
-- \(Y_i\) = skor total responden ke-\(i\)
-
-Hasil estimasi rata-rata tertimbang disajikan pada Tabel 4.9.
-
-#### Tabel 4.9 Hasil Weighted Mean
+- Ȳw : Weighted Mean (rata-rata tertimbang)
+- wi : Bobot responden ke-i
+- Yi : Skor total responden ke-i
 
 | Parameter | Nilai |
-|-----------|------:|
+|:----------|------:|
 | Weighted Mean | 30.398 |
-| Standard Error (SE) | 0.8455 |
+| Standard Error | 1.184 |
 
-Berdasarkan Tabel 4.9 diperoleh nilai *Weighted Mean* sebesar **30,398**. Hal ini menunjukkan bahwa rata-rata skor manajemen waktu belajar mahasiswa setelah memperhitungkan bobot sampling adalah sekitar **30,40**. Nilai *Standard Error* sebesar **0,8455** menunjukkan bahwa estimasi rata-rata memiliki tingkat kesalahan yang relatif kecil sehingga hasil estimasi dapat dikatakan cukup stabil.
+Berdasarkan hasil analisis diperoleh nilai *Weighted Mean* sebesar 30,398. Nilai ini menunjukkan bahwa rata-rata skor manajemen waktu belajar mahasiswa Program Studi Statistika Universitas Mataram setelah memperhitungkan bobot sampling adalah sekitar 30,40. Dengan rentang skor total antara 10 hingga 40, hasil tersebut menunjukkan bahwa secara umum mahasiswa memiliki tingkat manajemen waktu belajar yang tergolong baik.
 
----
-
-### 4.8.2 Interval Kepercayaan 95%
+### Confidence Interval (95%)
 
 Interval kepercayaan dihitung menggunakan persamaan berikut.
 
-\[
-CI=\bar{Y}\pm Z_{\alpha/2}\times SE
-\]
+```text
+CI = Ȳ ± Zα/2 × SE
+```
 
-dengan tingkat kepercayaan sebesar **95%**.
+Keterangan:
 
-Hasil perhitungan interval kepercayaan disajikan pada Tabel 4.10.
-
-#### Tabel 4.10 Interval Kepercayaan 95%
+- CI : Confidence Interval
+- Ȳ : Rata-rata estimasi
+- Zα/2 : Nilai Z pada tingkat kepercayaan 95% (1,96)
+- SE : Standard Error
 
 | Batas Bawah | Batas Atas |
 |------------:|-----------:|
-| 28.7403 | 32.0548 |
+| 28.077 | 32.718 |
 
-Berdasarkan Tabel 4.10 diperoleh interval kepercayaan sebesar **28,7403 hingga 32,0548**. Hal ini berarti bahwa rata-rata skor manajemen waktu belajar mahasiswa pada populasi diperkirakan berada dalam rentang tersebut dengan tingkat kepercayaan sebesar **95%**. Dengan kata lain, apabila pengambilan sampel dilakukan berulang kali menggunakan metode yang sama, maka sekitar 95% interval yang terbentuk akan memuat nilai rata-rata populasi yang sebenarnya.
+Berdasarkan hasil analisis diperoleh interval kepercayaan 95% sebesar 28,077 hingga 32,718. Hal ini berarti bahwa dengan tingkat kepercayaan sebesar 95%, rata-rata skor manajemen waktu belajar mahasiswa pada populasi diperkirakan berada pada rentang tersebut. Rentang interval yang tidak terlalu lebar menunjukkan bahwa estimasi rata-rata yang diperoleh memiliki tingkat ketelitian yang cukup baik.
 
----
+### Design Effect (DEFF)
 
-### 4.8.3 Design Effect (DEFF)
+Design Effect dihitung menggunakan persamaan berikut.
 
-Nilai *Design Effect* dihitung menggunakan persamaan berikut.
-
-\[
-DEFF=\frac{Var_{design}}{Var_{SRS}}
-\]
-
-Hasil perhitungan *Design Effect* disajikan pada Tabel 4.11.
-
-#### Tabel 4.11 Nilai Design Effect
-
-| Parameter | Nilai |
-|-----------|------:|
-| Design Effect (DEFF) | 1.2173 |
-
-Berdasarkan Tabel 4.11 diperoleh nilai *Design Effect* sebesar **1,2173**. Nilai ini menunjukkan bahwa varians estimasi yang dihasilkan menggunakan desain *Two-Stage Cluster Sampling* sekitar **1,22 kali** lebih besar dibandingkan apabila menggunakan *Simple Random Sampling*. Karena nilai DEFF masih mendekati **1**, maka desain sampling yang digunakan masih tergolong efisien dan tidak memberikan peningkatan varians yang terlalu besar terhadap hasil estimasi.
-
----
-
-### 4.8.4 Relative Standard Error (RSE)
-
-Nilai *Relative Standard Error* dihitung menggunakan persamaan berikut.
-
-\[
-RSE=\frac{SE}{\bar{Y}}\times100\%
-\]
-
-Hasil perhitungan RSE disajikan pada Tabel 4.12.
-
-#### Tabel 4.12 Nilai Relative Standard Error
-
-| Parameter | Nilai |
-|-----------|------:|
-| Relative Standard Error (RSE) | 2.7816 % |
-
-Berdasarkan Tabel 4.12 diperoleh nilai *Relative Standard Error* (RSE) sebesar **2,7816%**. Nilai tersebut berada di bawah **5%**, sehingga menunjukkan bahwa hasil estimasi memiliki tingkat ketelitian yang sangat baik. Dengan demikian, rata-rata skor manajemen waktu belajar mahasiswa yang diperoleh melalui analisis survei dapat dianggap cukup akurat dan representatif dalam menggambarkan kondisi populasi penelitian.
+```text
+             Var(design)
+DEFF = -----------------------
+              Var(SRS)
 ```
 
-Nilai RSE sebesar 2.78% menunjukkan bahwa estimasi termasuk sangat presisi.
+Keterangan:
+
+- Var(design) : Varians berdasarkan desain sampling
+- Var(SRS) : Varians berdasarkan Simple Random Sampling
+
+| Parameter | Nilai |
+|:----------|------:|
+| Design Effect | 2.387 |
+
+Berdasarkan hasil analisis diperoleh nilai *Design Effect* sebesar 2,387. Nilai ini menunjukkan bahwa varians estimasi menggunakan desain *Two-Stage Cluster Sampling* sekitar 2,39 kali lebih besar dibandingkan apabila menggunakan *Simple Random Sampling*. Kondisi tersebut merupakan hal yang umum pada metode cluster sampling karena responden dalam satu klaster cenderung memiliki karakteristik yang lebih mirip dibandingkan responden dari klaster yang berbeda.
+
+### Relative Standard Error (RSE)
+
+Relative Standard Error dihitung menggunakan persamaan berikut.
+
+```text
+          SE
+RSE = -------- × 100%
+          Ȳ
+```
+
+Keterangan:
+
+- RSE : Relative Standard Error
+- SE : Standard Error
+- Ȳ : Rata-rata estimasi
+
+| Parameter | Nilai |
+|:----------|------:|
+| Relative Standard Error | 3.895% |
+
+Berdasarkan hasil analisis diperoleh nilai *Relative Standard Error* sebesar 3,895%. Nilai tersebut berada di bawah batas 5%, sehingga menunjukkan bahwa hasil estimasi memiliki tingkat presisi yang sangat baik. Dengan demikian, rata-rata skor manajemen waktu belajar yang diperoleh dapat dianggap cukup andal dan representatif dalam menggambarkan kondisi populasi mahasiswa Program Studi Statistika Universitas Mataram.
+
+### Hasil Analisis Kualitas Estimasi
+
+| Parameter | Nilai | 
+|:----------|------:|
+| Weighted Mean | 30.398 | 
+| Standard Error (SE) | 1.184 | 
+| Confidence Interval (95%) | 28.077 – 32.718 |
+| Design Effect (DEFF) | 2.387 |
+| Relative Standard Error (RSE) | 3.895% | 
+
+Berdasarkan hasil analisis kualitas estimasi, diperoleh nilai Weighted Mean sebesar 30,398 yang menunjukkan bahwa rata-rata skor manajemen waktu belajar mahasiswa setelah memperhitungkan bobot sampling berada pada angka tersebut. Nilai Standard Error sebesar 1,184 mengindikasikan bahwa tingkat kesalahan estimasi relatif kecil sehingga rata-rata yang diperoleh cukup stabil. Confidence Interval 95% berada pada rentang 28,077 hingga 32,718, yang berarti rata-rata skor manajemen waktu belajar mahasiswa pada populasi diperkirakan berada dalam interval tersebut dengan tingkat kepercayaan sebesar 95%. Nilai Design Effect (DEFF) sebesar 2,387 menunjukkan bahwa varians estimasi menggunakan metode Two-Stage Cluster Sampling sekitar 2,39 kali lebih besar dibandingkan apabila menggunakan Simple Random Sampling. Hal ini merupakan konsekuensi dari penggunaan desain cluster sampling, di mana responden dalam satu klaster cenderung memiliki karakteristik yang lebih serupa. Selain itu, nilai Relative Standard Error (RSE) sebesar 3,895% berada di bawah batas 5%, sehingga menunjukkan bahwa hasil estimasi memiliki tingkat presisi yang sangat baik. Dengan demikian, hasil analisis yang diperoleh dapat dianggap cukup andal dan representatif dalam menggambarkan kondisi manajemen waktu belajar mahasiswa Program Studi Statistika Universitas Mataram.
+
+---
+
+## Kesimpulan
+
+Berdasarkan hasil analisis yang telah dilakukan, diperoleh beberapa kesimpulan sebagai berikut.
+
+1. Metode Two-Stage Cluster Sampling berhasil diterapkan untuk memilih sampel mahasiswa Program Studi Statistika Universitas Mataram melalui dua tahap, yaitu pemilihan klaster secara acak dan pemilihan responden pada klaster terpilih.
+
+2. Hasil uji validitas menunjukkan bahwa seluruh 10 butir pernyataan memiliki nilai corrected item-total correlation (r.drop) lebih besar dari 0,300 sehingga seluruh item dinyatakan valid dan layak digunakan dalam penelitian.
+
+3. Hasil uji reliabilitas menghasilkan nilai Cronbach's Alpha sebesar 0,868, yang menunjukkan bahwa instrumen penelitian memiliki konsistensi internal yang baik dan reliabel.
+
+4. Hasil statistik deskriptif menunjukkan bahwa rata-rata skor manajemen waktu belajar mahasiswa berada pada kategori yang cukup baik. Hal ini mengindikasikan bahwa sebagian besar responden telah mampu mengatur waktu belajar secara efektif.
+
+5. Hasil pembobotan menghasilkan bobot sebesar 6,000 untuk responden angkatan 2024 dan 5,647 untuk responden angkatan 2025. Perbedaan bobot tersebut disebabkan oleh perbedaan peluang terpilihnya responden pada masing-masing angkatan.
+
+6. Hasil analisis survei menunjukkan Weighted Mean sebesar 30,398 dengan Confidence Interval 95% sebesar 28,077–32,718. Nilai Design Effect (DEFF) sebesar 2,387 menunjukkan bahwa varians estimasi lebih besar dibandingkan Simple Random Sampling sebagai konsekuensi penggunaan cluster sampling. Sementara itu, nilai Relative Standard Error (RSE) sebesar 3,895% berada di bawah batas 5%, sehingga hasil estimasi memiliki tingkat presisi yang sangat baik dan dapat dianggap representatif terhadap populasi.
+
+Secara keseluruhan, penelitian ini menunjukkan bahwa metode Two-Stage Cluster Sampling dapat diterapkan dengan baik dalam pengambilan sampel mahasiswa Program Studi Statistika Universitas Mataram. Instrumen penelitian yang digunakan telah memenuhi kriteria valid dan reliabel, sehingga layak digunakan untuk mengukur manajemen waktu belajar mahasiswa. Hasil analisis menunjukkan bahwa rata-rata manajemen waktu belajar mahasiswa berada pada kategori yang cukup baik. Selain itu, hasil analisis kualitas estimasi menghasilkan nilai Relative Standard Error (RSE) sebesar 3,895%, yang menunjukkan bahwa estimasi yang diperoleh memiliki tingkat presisi yang sangat baik. Dengan demikian, hasil penelitian ini dapat dianggap representatif dalam menggambarkan kondisi manajemen waktu belajar mahasiswa Program Studi Statistika Universitas Mataram.
+
+---
+
+## Rekomendasi
+
+Berdasarkan hasil penelitian yang telah dilakukan, beberapa rekomendasi yang dapat diberikan adalah sebagai berikut.
+
+1. Mahasiswa diharapkan dapat mempertahankan dan meningkatkan kemampuan dalam mengelola waktu belajar melalui penyusunan jadwal belajar, penentuan prioritas, serta mengurangi aktivitas yang dapat mengganggu proses belajar.
+
+2. Program Studi Statistika Universitas Mataram dapat memanfaatkan hasil penelitian ini sebagai informasi awal dalam menyusun program atau kegiatan yang mendukung peningkatan kemampuan manajemen waktu belajar mahasiswa.
+
+3. Penelitian selanjutnya disarankan menggunakan jumlah sampel yang lebih besar atau melibatkan program studi maupun fakultas lain agar hasil penelitian memiliki cakupan yang lebih luas dan dapat dibandingkan antar kelompok.
+
+---
+
+## Link Kuesioner
+
+Kuesioner penelitian dapat diakses melalui tautan berikut:
+
+🔗 https: https://forms.gle/LPYhPn3oLHUgjiNr8
