@@ -551,18 +551,18 @@ Berdasarkan tabel di atas, mayoritas responden berjenis kelamin perempuan, yaitu
 ### Bar Chart Rata-rata Skor Tiap Pernyataan
 
 <p align="center">
-  <img src="./images/Bar_Chart.png" width="700">
+  <img src="./Bar_Chart.png" width="550">
 </p>
 
-Gambar 1. Bar chart rata-rata skor tiap pernyataan.
+Berdasarkan hasil visualisasi, rata-rata skor setiap pernyataan berada pada rentang 2,70 hingga 3,20 dari skala 1–4. Hal ini menunjukkan bahwa secara umum responden cenderung memberikan jawaban pada kategori "Setuju" terhadap seluruh indikator manajemen waktu belajar. Nilai rata-rata tertinggi terdapat pada pernyataan P7 sebesar 3,20, yang menunjukkan bahwa responden cukup mampu menyelesaikan target belajar yang telah ditetapkan. Sementara itu, nilai rata-rata terendah terdapat pada pernyataan P9 sebesar 2,70, yang mengindikasikan bahwa kemampuan membagi waktu antara belajar, organisasi, dan kegiatan pribadi masih menjadi aspek yang relatif lebih rendah dibandingkan indikator lainnya. Secara keseluruhan, hasil ini menunjukkan bahwa mahasiswa Program Studi Statistika Universitas Mataram memiliki tingkat manajemen waktu belajar yang tergolong cukup baik.
 
 ### Heatmap Korelasi Antar Item
 
 <p align="center">
-  <img src="./images/Korelasi.png" width="700">
+  <img src="./Korelasi.png" width="550">
 </p>
 
-Gambar 2. Heatmap korelasi antar item.
+Berdasarkan heatmap korelasi, seluruh item kuesioner memiliki hubungan yang bernilai positif dengan koefisien korelasi berkisar antara 0,13 hingga 0,67. Korelasi tertinggi terdapat pada pasangan item P3–P4 dan P3–P7 dengan nilai sebesar 0,67, yang menunjukkan hubungan cukup kuat antar kedua indikator tersebut. Sebaliknya, korelasi terendah terdapat pada pasangan item P2–P6 sebesar 0,13, yang menunjukkan hubungan yang relatif lemah. Secara keseluruhan, tidak ditemukan korelasi negatif antar item, sehingga seluruh indikator memiliki arah hubungan yang sejalan dalam mengukur manajemen waktu belajar mahasiswa. Pola korelasi yang didominasi oleh hubungan positif sedang hingga kuat juga mendukung konsistensi instrumen dalam mengukur konstruk yang sama.
 
 ---
 
