@@ -30,12 +30,9 @@ Analisis-Manajemen-Waktu-Belajar/
 ├── script/
 │   └── Analisis_Manajemen_Waktu.R
 ├── output/
-│   ├── Bar_Chart.png
-│   └── Heatmap_Korelasi.png
-├── randomisasi/
-│   └── Hasil_Randomisasi_Cluster.pdf
-└── formulir/
-    └── Kuesioner.pdf
+    ├── Bar_Chart.png
+    └── Korelasi.png
+
 ```
 
 Keterangan struktur repository:
