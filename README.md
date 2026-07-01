@@ -25,7 +25,8 @@ Analisis-Manajemen-Waktu-Belajar/
 ├── README.md
 ├── Executive_Summary.pdf
 ├── data/
-│   └── Data_Kuesioner.xlsx
+│   └── Data_Analisis_Manajemen_Waktu.xlsx
+│   └── Randomisasi_Analisis_Manajemen_Waktu.xlsx
 ├── script/
 │   └── Analisis_Manajemen_Waktu.R
 ├── output/
@@ -422,9 +423,9 @@ Tahap pengolahan data dilakukan untuk memastikan bahwa data yang digunakan telah
 | Outlier (Metode IQR) | 0 |
 | Status Data | Data siap dianalisis |
 
-Berdasarkan Tabel 4.2 diketahui bahwa data penelitian terdiri atas 30 responden. Hasil pemeriksaan menunjukkan bahwa tidak terdapat *missing value*, data duplikat, maupun *outlier* berdasarkan metode *Interquartile Range* (IQR). Dengan demikian, data telah memenuhi kriteria kualitas yang baik sehingga dapat digunakan pada tahap analisis selanjutnya tanpa memerlukan proses pembersihan atau perbaikan data tambahan.
+Berdasarkan hasil pengolahan data, diketahui bahwa data penelitian terdiri atas 30 responden. Hasil pemeriksaan menunjukkan bahwa tidak terdapat *missing value*, data duplikat, maupun *outlier* berdasarkan metode *Interquartile Range* (IQR). Dengan demikian, data telah memenuhi kriteria kualitas yang baik sehingga dapat digunakan pada tahap analisis selanjutnya tanpa memerlukan proses pembersihan atau perbaikan data tambahan.
 
-## 4.3 Uji Validitas
+## 3. Uji Validitas
 
 Uji validitas dilakukan untuk mengetahui apakah setiap butir pernyataan pada kuesioner sudah mampu mengukur variabel manajemen waktu belajar mahasiswa. Pengujian dilakukan menggunakan metode Corrected Item-Total Correlation (r.drop). Suatu item dinyatakan valid apabila memiliki nilai r.drop ≥ 0,30.
 \[
@@ -432,68 +433,62 @@ r_{it}=\frac{\sum (X_i-\bar X_i)(T_i-\bar T_i)}
 {\sqrt{\sum (X_i-\bar X_i)^2\sum (T_i-\bar T_i)^2}}
 \]
 
-| Item | Nilai r.drop | Keterangan |
-|:----:|-------------:|:-----------|
-| P1 | 0.6290 | Valid |
-| P2 | 0.1910 | Tidak Valid |
-| P3 | 0.5319 | Valid |
-| P4 | 0.1483 | Tidak Valid |
-| P5 | 0.2224 | Tidak Valid |
-| P6 | 0.6646 | Valid |
-| P7 | 0.6353 | Valid |
-| P8 | 0.2469 | Tidak Valid |
-| P9 | 0.2282 | Tidak Valid |
-| P10 | 0.5611 | Valid |
-| P11 | 0.3408 | Valid |
-| P12 | 0.7515 | Valid |
-| P13 | 0.6453 | Valid |
-| P14 | 0.3987 | Valid |
-| P15 | 0.6812 | Valid |
+| Item | r.drop | Keterangan |
+|:----:|-------:|:----------:|
+| P1 | 0.633 | Valid |
+| P2 | 0.536 | Valid |
+| P3 | 0.711 | Valid |
+| P4 | 0.677 | Valid |
+| P5 | 0.604 | Valid |
+| P6 | 0.412 | Valid |
+| P7 | 0.711 | Valid |
+| P8 | 0.599 | Valid |
+| P9 | 0.375 | Valid |
+| P10 | 0.685 | Valid |
 
-Berdasarkan Tabel 4.3, dari 15 butir pernyataan yang diuji terdapat 10 item yang dinyatakan valid, yaitu P1, P3, P6, P7, P10, P11, P12, P13, P14, dan P15. Hal ini karena nilai r.drop pada item-item tersebut lebih besar dari 0,30. Sementara itu, terdapat 5 item yang tidak valid, yaitu P2, P4, P5, P8, dan P9 karena nilai r.drop yang diperoleh masih kurang dari 0,30.
-
-Hasil ini menunjukkan bahwa 10 item yang valid sudah mampu mengukur manajemen waktu belajar mahasiswa dengan baik sehingga dapat digunakan pada analisis selanjutnya. Sebaliknya, 5 item yang tidak valid tidak digunakan dalam uji reliabilitas karena kurang mampu menggambarkan variabel yang diteliti.
+Berdasarkan Tabel 4.4, seluruh butir pernyataan memiliki nilai Corrected Item-Total Correlation (r.drop) lebih besar dari 0,300, yaitu berkisar antara 0,375 hingga 0,711. Hasil tersebut menunjukkan bahwa seluruh item telah memenuhi kriteria validitas sehingga mampu mengukur variabel manajemen waktu belajar mahasiswa dengan baik. Nilai r.drop tertinggi terdapat pada item P3 dan P7, yaitu sebesar 0,711, yang menunjukkan bahwa kedua item memiliki hubungan paling kuat dengan skor total instrumen. Sementara itu, nilai r.drop terendah terdapat pada item P9, yaitu sebesar 0,375. Meskipun merupakan nilai terendah, nilai tersebut masih berada di atas batas minimum yang ditetapkan sehingga item tersebut tetap dinyatakan valid. Secara keseluruhan, seluruh 10 item pernyataan dinyatakan valid dan layak digunakan pada tahap uji reliabilitas serta analisis selanjutnya tanpa perlu mengeliminasi satu pun butir pernyataan.
 
 ---
 
-## 4.4 Uji Reliabilitas
+## 4. Uji Reliabilitas
 
-Uji reliabilitas dilakukan untuk mengetahui tingkat konsistensi instrumen penelitian. Pengujian dilakukan menggunakan metode Cronbach's Alpha terhadap 10 item yang telah dinyatakan valid pada uji validitas. Suatu instrumen dikatakan reliabel apabila memiliki nilai Cronbach's Alpha lebih besar dari 0,70.
+Uji reliabilitas dilakukan untuk mengetahui tingkat konsistensi instrumen penelitian dalam mengukur variabel manajemen waktu belajar mahasiswa. Pengujian menggunakan metode *Cronbach's Alpha*. Suatu instrumen dinyatakan reliabel apabila memiliki nilai *Cronbach's Alpha ≥ 0,700*.
+
+Rumus Cronbach's Alpha yang digunakan adalah:
+
 \[
-\alpha=
-\frac{k}{k-1}
-\left(
-1-
-\frac{\sum S_i^2}{S_T^2}
-\right)
+\alpha=\frac{k}{k-1}\left(1-\frac{\sum S_i^2}{S_T^2}\right)
 \]
 
+dengan:
+
+- \(k\) = jumlah item pernyataan
+- \(S_i^2\) = varians setiap item
+- \(S_T^2\) = varians skor total
 
 | Parameter | Nilai |
-|:--------------------|------:|
-| Cronbach's Alpha (raw_alpha) | 0.8681 |
-| Standardized Alpha (std.alpha) | 0.8743 |
-| G6(smc) | 0.9045 |
-| Average Inter-Item Correlation | 0.4103 |
-| Signal-to-Noise Ratio (S/N) | 6.9564 |
-| Standard Error (ase) | 0.0361 |
-| Mean | 3.0433 |
-| Standard Deviation | 0.4599 |
-| Median Inter-Item Correlation | 0.4129 |
+|:-------------------------------|------:|
+| Cronbach's Alpha (raw_alpha) | 0.868 |
+| Standardized Alpha (std.alpha) | 0.874 |
+| G6(smc) | 0.904 |
+| Average Inter-Item Correlation | 0.410 |
+| Signal-to-Noise Ratio (S/N) | 6.956 |
+| Standard Error (ase) | 0.036 |
+| Mean | 3.043 |
+| Standard Deviation | 0.460 |
+| Median Inter-Item Correlation | 0.413 |
 
-Berdasarkan Tabel 4.4 diperoleh nilai Cronbach's Alpha sebesar 0,8681. Nilai tersebut lebih besar dari 0,70 sehingga instrumen penelitian dapat dinyatakan reliabel.
-
-Hasil ini menunjukkan bahwa kesepuluh item pernyataan yang digunakan memiliki tingkat konsistensi yang baik dalam mengukur manajemen waktu belajar mahasiswa. Dengan demikian, instrumen yang telah lolos uji validitas dan reliabilitas layak digunakan pada tahap analisis berikutnya.
+Berdasarkan Tabel di atas, diperoleh nilai *Cronbach's Alpha* sebesar 0.868, lebih besar dari batas minimum 0.700. Hasil tersebut menunjukkan bahwa instrumen penelitian memiliki tingkat reliabilitas yang tinggi sehingga mampu memberikan hasil pengukuran yang konsisten. Nilai *Standardized Alpha* sebesar 0.874 juga menunjukkan konsistensi internal yang sangat baik setelah dilakukan standardisasi data. Selain itu, nilai *Average Inter-Item Correlation* sebesar *0.410* mengindikasikan bahwa antarbutir pernyataan memiliki hubungan yang cukup baik dalam mengukur konstruk yang sama, yaitu manajemen waktu belajar mahasiswa. Secara keseluruhan, hasil uji reliabilitas menunjukkan bahwa seluruh 10 item pernyataan memiliki tingkat konsistensi internal yang baik sehingga instrumen penelitian dinyatakan *reliabel* dan layak digunakan pada tahap analisis statistika deskriptif, pembobotan *Two-Stage Cluster Sampling*, serta analisis survei.
 
 ---
 
-## 4.5 Statistik Deskriptif
+## 5. Statistik Deskriptif
 
-## 4.5 Analisis Statistika Deskriptif
+#### Analisis Statistika Deskriptif
 
 Analisis statistika deskriptif dilakukan untuk memberikan gambaran mengenai skor manajemen waktu belajar mahasiswa serta karakteristik responden berdasarkan angkatan, semester, dan jenis kelamin.
 
-### 4.5.1 Statistik Deskriptif Skor Manajemen Waktu Belajar
+#### Statistik Deskriptif Skor Manajemen Waktu Belajar
 
 | Statistik | Nilai |
 |:-----------|------:|
@@ -507,7 +502,7 @@ Analisis statistika deskriptif dilakukan untuk memberikan gambaran mengenai skor
 
 Berdasarkan Tabel 4.5 diperoleh rata-rata skor manajemen waktu belajar mahasiswa sebesar 30,43 dengan nilai median sebesar 30. Nilai minimum yang diperoleh responden adalah 21, sedangkan nilai maksimum adalah 39. Standar deviasi sebesar 4,60 menunjukkan bahwa penyebaran skor responden relatif tidak terlalu besar sehingga sebagian besar skor berada di sekitar nilai rata-ratanya.
 
-### 4.5.2 Distribusi Responden Berdasarkan Angkatan
+#### Distribusi Responden Berdasarkan Angkatan
 
 | Angkatan | Jumlah Responden |
 |:---------:|-----------------:|
@@ -517,7 +512,7 @@ Berdasarkan Tabel 4.5 diperoleh rata-rata skor manajemen waktu belajar mahasiswa
 
 Berdasarkan Tabel 4.6 diketahui bahwa responden angkatan 2025 berjumlah 17 orang, sedangkan angkatan 2024 berjumlah 13 orang. Hal ini menunjukkan bahwa sebagian besar responden pada penelitian ini berasal dari angkatan 2025.
 
-### 4.5.3 Distribusi Responden Berdasarkan Semester
+#### Distribusi Responden Berdasarkan Semester
 
 | Semester | Jumlah Responden |
 |:---------:|-----------------:|
@@ -527,7 +522,7 @@ Berdasarkan Tabel 4.6 diketahui bahwa responden angkatan 2025 berjumlah 17 orang
 
 Berdasarkan Tabel 4.7 diketahui bahwa responden semester 2 berjumlah 17 orang dan semester 4 berjumlah 13 orang. Dengan demikian, mayoritas responden dalam penelitian ini merupakan mahasiswa semester 2.
 
-### 4.5.4 Distribusi Responden Berdasarkan Jenis Kelamin
+#### Distribusi Responden Berdasarkan Jenis Kelamin
 
 | Jenis Kelamin | Jumlah | Persentase (%) |
 |:--------------|-------:|---------------:|
@@ -539,9 +534,9 @@ Berdasarkan Tabel 4.8 diketahui bahwa responden perempuan berjumlah 27 orang ata
 
 ---
 
-## 4.6 Visualisasi Data
+## 6. Visualisasi Data
 
-### 4.7.1 Rata-rata Tiap Item
+### 6.1 Rata-rata Tiap Item
 
 ### Output
 
