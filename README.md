@@ -548,23 +548,21 @@ Berdasarkan tabel di atas, mayoritas responden berjenis kelamin perempuan, yaitu
 
 ## 6. Visualisasi Data
 
-### Rata-rata Tiap Item
+### Bar Chart Rata-rata Skor Tiap Pernyataan
 
 <p align="center">
-  <img src="images/Bar Chart Analisis Manajemen Waktu Belajar" width="700">
+  <img src="./images/Bar_Chart.png" width="700">
 </p>
 
-### Korelasi Antar Item
+Gambar 1. Bar chart rata-rata skor tiap pernyataan.
 
-### Output
+### Heatmap Korelasi Antar Item
 
-```r
-corrplot(cor_item, method = "color", type = "upper")
-```
+<p align="center">
+  <img src="./images/Korelasi.png" width="700">
+</p>
 
-### Pembahasan
-
-Terdapat korelasi positif antar sebagian besar item yang menunjukkan bahwa indikator manajemen waktu belajar saling berhubungan.
+Gambar 2. Heatmap korelasi antar item.
 
 ---
 
