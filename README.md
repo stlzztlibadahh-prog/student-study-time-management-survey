@@ -48,18 +48,17 @@ Keterangan struktur repository:
 
 ## 📑 Daftar Isi
 
-- [📖 Deskripsi Proyek](#-deskripsi-proyek)
-- [📂 Struktur Repository](#-struktur-repository)
-- [📚 Latar Belakang](#-latar-belakang)
-- [🎯 Tujuan Penelitian](#-tujuan-penelitian)
-- [🔬 Metodologi Penelitian](#-metodologi-penelitian)
-- [🔄 Alur Analisis](#-alur-analisis)
-- [⚙️ Langkah Analisis](#️-langkah-analisis)
-- [📊 Hasil dan Pembahasan](#-hasil-dan-pembahasan)
-- [✅ Kesimpulan](#-kesimpulan)
-- [💡 Rekomendasi](#-rekomendasi)
-- [📚 Referensi](#-referensi)
-- [🔗 Link Kuesioner](#-link-kuesioner)
+- [Deskripsi Proyek](#-deskripsi-proyek)
+- [Struktur Repository](#-struktur-repository)
+- [Latar Belakang](#-latar-belakang)
+- [Tujuan Penelitian](#-tujuan-penelitian)
+- [Metodologi Penelitian](#-metodologi-penelitian)
+- [Alur Analisis](#-alur-analisis)
+- [Langkah Analisis](#️-langkah-analisis)
+- [Hasil dan Pembahasan](#-hasil-dan-pembahasan)
+- [Kesimpulan](#-kesimpulan)
+- [Rekomendasi](#-rekomendasi)
+- [Link Kuesioner](#-link-kuesioner)
 
 ---
 
