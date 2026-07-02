@@ -63,7 +63,7 @@ Keterangan struktur repository:
 
 ---
 
-## 📖Latar Belakang
+## 📚Latar Belakang
 
 Manajemen waktu merupakan kemampuan seseorang dalam mengatur dan memanfaatkan waktu secara efektif untuk menyelesaikan berbagai aktivitas. Bagi mahasiswa, manajemen waktu belajar menjadi salah satu faktor penting yang dapat mendukung keberhasilan akademik. Kemampuan dalam mengatur jadwal belajar, menyelesaikan tugas tepat waktu, serta menyeimbangkan kegiatan akademik dan nonakademik dapat meningkatkan produktivitas dan efektivitas proses belajar.
 
@@ -149,7 +149,7 @@ Analisis dilakukan menggunakan perangkat lunak R melalui tahapan:
     
 ---
 
-## 📊Langkah Analisis
+## ⚙️Langkah Analisis
 
 ### 1. Import Data
 
