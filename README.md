@@ -8,7 +8,7 @@
 
 ---
 
-## Deskripsi Proyek
+## 📖Deskripsi Proyek
 
 Repository ini memuat seluruh tahapan penelitian mengenai manajemen waktu belajar mahasiswa Program Studi Statistika Universitas Mataram dengan menerapkan metode Two-Stage Cluster Sampling sebagai teknik pengambilan sampel. Penelitian dilakukan berdasarkan data hasil penyebaran kuesioner untuk memperoleh gambaran mengenai tingkat manajemen waktu belajar mahasiswa serta menghasilkan estimasi yang dapat mewakili populasi.
 
@@ -48,7 +48,7 @@ Keterangan struktur repository:
 
 ## 📑 Daftar Isi
 
-- [Deskripsi Proyek](#-deskripsi-proyek)
+- [📖 Deskripsi Proyek](#-deskripsi-proyek)
 - [📂 Struktur Repository](#-struktur-repository)
 - [📚 Latar Belakang](#-latar-belakang)
 - [🎯 Tujuan Penelitian](#-tujuan-penelitian)
