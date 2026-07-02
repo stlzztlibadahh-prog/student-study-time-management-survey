@@ -8,7 +8,7 @@
 
 ---
 
-## Deskripsi Proyek
+## 📖Deskripsi Proyek
 
 Repository ini memuat seluruh tahapan penelitian mengenai manajemen waktu belajar mahasiswa Program Studi Statistika Universitas Mataram dengan menerapkan metode Two-Stage Cluster Sampling sebagai teknik pengambilan sampel. Penelitian dilakukan berdasarkan data hasil penyebaran kuesioner untuk memperoleh gambaran mengenai tingkat manajemen waktu belajar mahasiswa serta menghasilkan estimasi yang dapat mewakili populasi.
 
@@ -18,51 +18,52 @@ Repository ini disusun sebagai dokumentasi penelitian yang terstruktur sehingga 
 
 ---
 
-## Struktur Repository
+## 📂Struktur Repository
 
 ```text
 Analisis-Manajemen-Waktu-Belajar/
 ├── README.md
 ├── Executive_Summary.pdf
 ├── data/
-│   └── Data_Analisis_Manajemen_Waktu.xlsx
+│   ├── Data_Analisis_Manajemen_Waktu.xlsx
 │   └── Randomisasi_Analisis_Manajemen_Waktu.xlsx
 ├── script/
 │   └── Analisis_Manajemen_Waktu.R
-├── output/
+└── output gambar/
     ├── Bar_Chart.png
     └── Korelasi.png
-
 ```
 
 Keterangan struktur repository:
 
 | Folder/File | Keterangan |
 |-------------|------------|
-| README.md | Dokumentasi lengkap penelitian dan hasil analisis. |
-| data | Berisi data mentah yang digunakan pada penelitian. |
-| script | Berisi script R untuk seluruh proses analisis data. |
-| gambar | Berisi visualisasi hasil analisis berupa bar chart dan heatmap. |
-| randomisasi | Berisi hasil proses pemilihan cluster secara acak menggunakan metode Two-Stage Cluster Sampling. |
-| formulir | Berisi instrumen penelitian berupa kuesioner yang digunakan dalam pengumpulan data. |
+| README.md | Dokumentasi lengkap penelitian, mulai dari metodologi, langkah analisis, hasil, hingga kesimpulan penelitian. |
+| Executive_Summary.pdf | Ringkasan eksekutif penelitian yang memuat tujuan, metode, hasil utama, dan rekomendasi penelitian. |
+| data | Berisi data penelitian yang digunakan dalam analisis, meliputi data hasil kuesioner dan hasil randomisasi sampel. |
+| script | Berisi script R yang digunakan untuk seluruh proses analisis data, mulai dari pemeriksaan data, uji validitas, uji reliabilitas, analisis statistika deskriptif, visualisasi, pembobotan, hingga analisis survei. |
+| output gambar | Berisi hasil visualisasi analisis berupa bar chart rata-rata skor setiap pernyataan dan heatmap korelasi antar item. |
 
 ---
 
-## Daftar Isi
+## 📑 Daftar Isi
 
-- [Latar Belakang](#latar-belakang)
-- [Tujuan Penelitian](#tujuan-penelitian)
-- [Metodologi Penelitian](#metodologi-penelitian)
-- [Struktur Repository](#struktur-repository)
-- [Alur Analisis](#alur-analisis)
-- [Hasil dan Pembahasan](#hasil-dan-pembahasan)
-- [Kesimpulan](#kesimpulan)
-- [Rekomendasi](#rekomendasi)
-- [Referensi](#referensi)
-- [Link Kuesioner](#link-kuesioner)
+- [📖 Deskripsi Proyek](#-deskripsi-proyek)
+- [📂 Struktur Repository](#-struktur-repository)
+- [📚 Latar Belakang](#-latar-belakang)
+- [🎯 Tujuan Penelitian](#-tujuan-penelitian)
+- [🔬 Metodologi Penelitian](#-metodologi-penelitian)
+- [🔄 Alur Analisis](#-alur-analisis)
+- [⚙️ Langkah Analisis](#️-langkah-analisis)
+- [📊 Hasil dan Pembahasan](#-hasil-dan-pembahasan)
+- [✅ Kesimpulan](#-kesimpulan)
+- [💡 Rekomendasi](#-rekomendasi)
+- [📚 Referensi](#-referensi)
+- [🔗 Link Kuesioner](#-link-kuesioner)
+
 ---
 
-## Latar Belakang
+## 📖Latar Belakang
 
 Manajemen waktu merupakan kemampuan seseorang dalam mengatur dan memanfaatkan waktu secara efektif untuk menyelesaikan berbagai aktivitas. Bagi mahasiswa, manajemen waktu belajar menjadi salah satu faktor penting yang dapat mendukung keberhasilan akademik. Kemampuan dalam mengatur jadwal belajar, menyelesaikan tugas tepat waktu, serta menyeimbangkan kegiatan akademik dan nonakademik dapat meningkatkan produktivitas dan efektivitas proses belajar.
 
@@ -72,7 +73,7 @@ Penelitian ini menggunakan metode Two-Stage Cluster Sampling sebagai teknik peng
 
 ---
 
-## Tujuan Penelitian
+## 🎯Tujuan Penelitian
 
 Penelitian ini bertujuan untuk:
 
@@ -85,7 +86,7 @@ Penelitian ini bertujuan untuk:
 
 ---
 
-## Metodologi Penelitian
+## 🔬Metodologi Penelitian
 
 Metodologi penelitian menjelaskan pendekatan yang digunakan, teknik pengambilan sampel, instrumen penelitian, teknik pengumpulan data, serta tahapan analisis yang dilakukan untuk memperoleh hasil penelitian.
 
@@ -112,7 +113,7 @@ Instrumen penelitian berupa kuesioner mengenai manajemen waktu belajar mahasiswa
 | Setuju (S) | 3 |
 | Sangat Setuju (SS) | 4 |
 
-#### Variabel Penelitian
+### Variabel Penelitian
 
 | Kode | Pernyataan |
 |------|------------|
@@ -133,7 +134,7 @@ Data dikumpulkan melalui penyebaran kuesioner kepada responden yang terpilih seb
 
 ---
 
-## Alur Analisis
+## 🔄Alur Analisis
 Analisis dilakukan menggunakan perangkat lunak R melalui tahapan:
 
 1. Import data hasil kuesioner.
@@ -148,9 +149,9 @@ Analisis dilakukan menggunakan perangkat lunak R melalui tahapan:
     
 ---
 
-## LANGKAH ANALISIS
+## 📊Langkah Analisis
 
-### Import Data
+### 1. Import Data
 
 Data hasil kuesioner diimpor ke dalam R untuk dilakukan proses analisis.
 
@@ -164,7 +165,7 @@ str(data)
 summary(data)
 ```
 
-### Pengolahan Data
+### 2. Pengolahan Data
 
 Tahap ini dilakukan untuk memastikan data siap dianalisis.
 
@@ -179,7 +180,7 @@ data <- na.omit(data)
 boxplot.stats(data$Skor_Total)$out
 ```
 
-### Menyiapkan Variabel Penelitian
+### 3. Menyiapkan Variabel Penelitian
 
 Variabel penelitian dipilih dari kolom H sampai V kemudian diberi nama P1–P15 agar lebih mudah dianalisis.
 
@@ -202,7 +203,7 @@ item <- data %>%
 data$Skor_Total <- rowSums(item)
 ```
 
-### Uji Validitas
+### 4. Uji Validitas
 
 Uji validitas dilakukan menggunakan Corrected Item-Total Correlation.
 
@@ -214,7 +215,7 @@ hasil_validitas <- alpha(item)
 hasil_validitas$item.stats
 ```
 
-### Uji Reliabilitas
+### 5. Uji Reliabilitas
 
 Uji reliabilitas dilakukan menggunakan Cronbach's Alpha.
 
@@ -226,7 +227,7 @@ hasil_reliabilitas$total
 data$Skor_Total <- rowSums(item)
 ```
 
-### Analisis Statistika Deskriptif
+### 6. Analisis Statistika Deskriptif
 
 Analisis deskriptif dilakukan untuk mengetahui karakteristik responden dan gambaran skor manajemen waktu belajar.
 
@@ -246,7 +247,7 @@ table(data$`Jenis Kelamin`)
 prop.table(table(data$`Jenis Kelamin`)) * 100
 ```
 
-## Visualisasi Data
+### 7. Visualisasi Data
 
 Visualisasi data dilakukan untuk memberikan gambaran mengenai rata-rata skor setiap pernyataan serta hubungan antarbutir pernyataan pada kuesioner manajemen waktu belajar.
 
@@ -290,7 +291,7 @@ corrplot(
 )
 ```
 
-### Pembobotan Two-Stage Cluster Sampling
+### 8. Pembobotan Two-Stage Cluster Sampling
 
 Pembobotan dilakukan berdasarkan peluang pemilihan responden pada setiap tahap sampling.
 
@@ -323,7 +324,7 @@ data$Weight <- ifelse(
 )
 ```
 
-### Analisis Data
+### 9. Analisis Survey
 
 Analisis data dilakukan menggunakan package **survey**.
 
@@ -355,9 +356,9 @@ SE(hasil) / coef(hasil) * 100
 ```
 ---
 
-## HASIL DAN PEMBAHASAN
+## 📊HASIL DAN PEMBAHASAN
 
-### Import Data
+### 1. Import Data
 #### Head Data
 Bagian ini menampilkan enam data pertama dari dataset untuk memberikan gambaran awal mengenai struktur data yang digunakan dalam penelitian.
 
@@ -563,7 +564,6 @@ Berdasarkan heatmap korelasi, seluruh item kuesioner memiliki hubungan yang bern
 
 ---
 
-
 ## 7. Pembobotan Two-Stage Cluster Sampling
 
 Pembobotan dilakukan untuk memperoleh bobot setiap responden berdasarkan peluang terpilihnya sampel pada metode *Two-Stage Cluster Sampling*. Bobot dihitung menggunakan peluang pemilihan pada tahap pertama dan tahap kedua.
@@ -645,7 +645,7 @@ Berdasarkan hasil perhitungan diperoleh bobot sebesar 6,0000 untuk responden ang
 
 ---
 
-## 8. Analisis SurveI
+## 8. Analisis Survey
 
 Analisis survei dilakukan menggunakan package `survey` pada perangkat lunak R dengan memanfaatkan bobot hasil pembobotan *Two-Stage Cluster Sampling* yang telah diperoleh pada tahap sebelumnya. Analisis ini bertujuan untuk memperoleh estimasi rata-rata skor manajemen waktu belajar mahasiswa beserta ukuran ketelitian hasil estimasinya.
 
@@ -737,7 +737,7 @@ Keterangan:
 
 Berdasarkan hasil analisis diperoleh nilai *Relative Standard Error* sebesar 3,895%. Nilai tersebut berada di bawah batas 5%, sehingga menunjukkan bahwa hasil estimasi memiliki tingkat presisi yang sangat baik. Dengan demikian, rata-rata skor manajemen waktu belajar yang diperoleh dapat dianggap cukup andal dan representatif dalam menggambarkan kondisi populasi mahasiswa Program Studi Statistika Universitas Mataram.
 
-### Hasil Analisis Kualitas Estimasi
+### Hasil Analisis Survey
 
 | Parameter | Nilai | 
 |:----------|------:|
@@ -751,7 +751,7 @@ Berdasarkan hasil analisis kualitas estimasi, diperoleh nilai Weighted Mean sebe
 
 ---
 
-## Kesimpulan
+## ✅Kesimpulan
 
 Berdasarkan hasil analisis yang telah dilakukan, diperoleh beberapa kesimpulan sebagai berikut.
 
@@ -771,7 +771,7 @@ Secara keseluruhan, penelitian ini menunjukkan bahwa metode Two-Stage Cluster Sa
 
 ---
 
-## Rekomendasi
+## 💡Rekomendasi
 
 Berdasarkan hasil penelitian yang telah dilakukan, beberapa rekomendasi yang dapat diberikan adalah sebagai berikut.
 
@@ -783,8 +783,8 @@ Berdasarkan hasil penelitian yang telah dilakukan, beberapa rekomendasi yang dap
 
 ---
 
-## Link Kuesioner
+## 🔗Link Kuesioner
 
 Kuesioner penelitian dapat diakses melalui tautan berikut:
 
-🔗 https: https://forms.gle/LPYhPn3oLHUgjiNr8
+https: https://forms.gle/LPYhPn3oLHUgjiNr8
