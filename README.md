@@ -23,15 +23,15 @@ Repository ini disusun sebagai dokumentasi penelitian yang terstruktur sehingga 
 ```text
 Analisis-Manajemen-Waktu-Belajar/
 ├── README.md
-├── Executive_Summary.pdf
+├── executive-summary.pdf
 ├── data/
-│   ├── Data_Analisis_Manajemen_Waktu.xlsx
-│   └── Randomisasi_Analisis_Manajemen_Waktu.xlsx
+│   ├── study-time-management-data.xlsx
+│   └── randomization-analysis.xlsx
 ├── script/
-│   └── Analisis_Manajemen_Waktu.R
+│   └── study-time-management-analysis.R
 └── output gambar/
-    ├── Bar_Chart.png
-    └── Korelasi.png
+    ├── bar-chart.png
+    └── correlation-analysis.png
 ```
 
 Keterangan struktur repository:
@@ -39,7 +39,7 @@ Keterangan struktur repository:
 | Folder/File | Keterangan |
 |-------------|------------|
 | README.md | Dokumentasi lengkap penelitian, mulai dari metodologi, langkah analisis, hasil, hingga kesimpulan penelitian. |
-| Executive_Summary.pdf | Ringkasan eksekutif penelitian yang memuat tujuan, metode, hasil utama, dan rekomendasi penelitian. |
+| executive-summary.pdf | Ringkasan eksekutif penelitian yang memuat tujuan, metode, hasil utama, dan rekomendasi penelitian. |
 | data | Berisi data penelitian yang digunakan dalam analisis, meliputi data hasil kuesioner dan hasil randomisasi sampel. |
 | script | Berisi script R yang digunakan untuk seluruh proses analisis data, mulai dari pemeriksaan data, uji validitas, uji reliabilitas, analisis statistika deskriptif, visualisasi, pembobotan, hingga analisis survei. |
 | output gambar | Berisi hasil visualisasi analisis berupa bar chart rata-rata skor setiap pernyataan dan heatmap korelasi antar item. |
